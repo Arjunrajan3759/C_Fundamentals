@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+void main() {
+    int matrix[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int matrix2[3][3] = {{9,8,7},{6,5,4},{3,2,1}};
+    int matrix3[3][3];
+    int matrix4[3][3];
+    
+    int i,j;
+    
+    for(i = 0;i<3;i++){
+        for(j = 0;j<3;j++){
+            matrix3[i][j] = matrix[i][j]+matrix2[i][j];
+        }
+    }
+    
+    for(i = 0;i<3;i++){
+        for(j = 0;j<3;j++){
+            matrix4[i][j] = matrix[i][j]-matrix2[i][j];
+        }
+    }
+    
+    
+    printf("\nThe Sum of the Matrices is: \n");
+    for(i = 0;i<3;i++){
+        for(j = 0;j<3;j++){
+            printf("%d ",matrix3[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("\nThe Difference of the Matrices is: \n");
+    for(i = 0;i<3;i++){
+        for(j = 0;j<3;j++){
+            printf("%d ",matrix4[i][j]);
+        }
+        printf("\n");
+    }
+    
+    
+}
