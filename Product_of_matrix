@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void main() {
+    int i,j,k;
+    int matrix[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int matrix2[3][3] = {{9,8,7},{6,5,4},{3,2,1}};
+    int matrix3[3][3];
+    
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            matrix3[i][j] = 0;
+            for(k = 0;k<3;k++){
+                matrix3[i][j] = matrix3[i][j] + matrix[i][k]*matrix2[k][j];
+            }
+        }
+    }
+    printf("The product of matrix is: \n");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%d ",matrix3[i][j]);
+        }
+        printf("\n");
+    }
+}
